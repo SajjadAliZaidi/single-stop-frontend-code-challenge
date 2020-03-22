@@ -3,6 +3,8 @@
 Thank you for taking the time to do our code challenge. Your task is to create a comments app using React, React 
 Hooks, and Redux. Please refer to the images in the ui-screenshots directory. The layout and styling should match these 
 images as closely as possible.
+
+![image of app](ui-screenshots/code-challenge-with-two-comments.png)
  
 ## Feature Requirements
 1. The default state of the application should match the following image: `code-challenge-default-state.png`
