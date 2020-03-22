@@ -78,8 +78,10 @@ The sample response payload illustrates the response shape from a POST request t
 * The mock API stores submissions in memory but does not persist to disk. When you stop the Node.js process for the API any previously submitted comments will be gone.
 * The mock API is not pre-seeded with comments. The `GET` request will not return any comments unless and until you have submitted comments. 
 ## Technical Requirements
-1. Please use function components and React Hooks
+1. Please use React Hooks
 2. The comments should be stored in Redux, not the local state of the components.
+3. Please make sure that your Redux store is exposed to Redux Dev Tools
+4. Please use JavaScript Standard Style
  
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
