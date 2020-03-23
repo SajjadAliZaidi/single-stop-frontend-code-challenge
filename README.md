@@ -20,8 +20,7 @@ images as closely as possible.
 ## What's in this project file?
 
 We know that applying for developer jobs can be very time consuming. In the interest of saving you some time, we have 
-taken the liberty of bootstrapping the project with Create React App. We have added the necessary Redux packages to the 
-package.json as well. 
+taken the liberty of bootstrapping the project with Create React App. We've added Redux and Thunks middleware to the package.json as well. 
 
 In order to simulate working with a backend, we have provided a mock API for comments. We also added a script to 
 install the dependencies for both the frontend and the API with a single command. Additionally, we tweaked the default start
@@ -89,7 +88,7 @@ The response shape to the aforementioned request would look like this:
 * The mock API stores submissions in memory but does not persist to disk. When you stop the Node.js process for the API any previously submitted comments will be gone.
 * The mock API is not pre-seeded with comments. The `GET` request will not return any comments unless and until you have submitted comments. 
 ## Technical Requirements
-1. Please use React Hooks
+1. Please use React Hooks and React-Redux Hooks
 2. The comments should be stored in Redux, not the local state of the components.
 3. Please make sure that your Redux store is exposed to Redux Dev Tools
 4. Please use JavaScript Standard Style
