@@ -52,8 +52,9 @@ The following sample response illustrates the shape returned by a GET request to
   }
 }
 ```
+**Please note** that the mock API is not pre-populated with comments. You want get anything back from the GET request until you have made one or more submissions
 
-The following sample payload illustrates the correct shape of a POST request to the comment API:
+The following sample payload illustrates the correct shape of a **POST** request to the comment API:
 ```
 {
   "comment": {
@@ -63,7 +64,7 @@ The following sample payload illustrates the correct shape of a POST request to 
 }
 ```
 
-The sample response payload illustrates the response shape from a POST request to the API:
+The sample response payload illustrates the response shape from a **POST** request to the API:
 ```
 {
   "body": "This is a comment!",
@@ -72,6 +73,16 @@ The sample response payload illustrates the response shape from a POST request t
   "time": "12:34:00 AM",
   "id": "1584765240234"
 }
+```
+
+The following URL demonstrates a **DELETE** request:
+`/comments/1584765206902`
+
+In this scenario we are deleting a comment with the ID `1584765206902`
+
+The response shape to the aforementioned request would look like this:
+```
+{id: 1584765206902}
 ```
 
 ### Please note the following when working with the mock API:
