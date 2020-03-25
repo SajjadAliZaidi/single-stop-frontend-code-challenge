@@ -1,26 +1,31 @@
 ## SingleStop Frontend Developer Code Challenge
 
-Thank you for taking the time to do our code challenge. Your task is to create a comments app using React, React 
-Hooks, and Redux. Please refer to the images in the ui-screenshots directory. The layout and styling should match these 
-images as closely as possible.
+Thank you for taking the time to do our code challenge. Over the years we've been involved in many technical 
+interviews --on both sides of the table.  We feel that this is a better way to know you as a developer than whiteboarding 
+or solving esoteric puzzles. We _think_ this will take you around 2 to 2.5 hours to complete (excluding the extra credit) 
+depending upon how many breaks you take. 
 
-![image of app](ui-screenshots/code-challenge-with-two-comments.png)
+Your task is to create a comments app using React, React Hooks, Redux, and React-Redux Hooks. Please refer to the images 
+in the ui-screenshots directory and the specifications outlined in this document. The styling does not need to be a 
+pixel-perfect exact match. It should however look close to the images supplied. 
+ 
+
+![image of app](ui-screenshots/populated-state.png)
  
 ## Feature Requirements
-1. The default state of the application should match the following image: `code-challenge-default-state.png`
-2. Submitting a comment should display the comment below the submit button (see `code-challenge-with-one-comment.png`)
-3. When one or more comments have been successfully submitted, the comment count should display in the main heading 
-4. The comment count should not display when no comments have been submitted.
-5. When a comment is successfully submitted, the email and comment inputs should clear (see `code-challenge-with-one-comment.png`).
-6. If the email field is left empty, the comment should not submit and an error should display (see `code-challenge-error.png`)
-7. Submitting a new comment does not replace the previous comment. It adds to the comments (see: ui-screenshots/code-challenge-with-two-comments.png)
-8. Clicking the "Delete" button on a comment should remove it from the comments display.
-9. The comments should persist if the page is reloaded. 
+1. Please style the application to match the images in the ui-screenshots directory.
+2. The comment count in the main heading should update when comments are added or deleted
+3. The comment count should **not** display when there are zero comments.
+4. When a comment is successfully submitted, the email input and comment inputs should automatically clear.
+5. If the email field is left empty the comment should not submit and an error should display (see `error-sstate.png` in `ui-screenshots`)
+6. If the comment field is left empty clicking the button should not trigger a submission.
+6. The comments should persist if the page is reloaded. 
 
 ## What's in this project file?
 
 We know that applying for developer jobs can be very time consuming. In the interest of saving you some time, we have 
-taken the liberty of bootstrapping the project with Create React App. We've added Redux and Thunks middleware to the package.json as well. 
+taken the liberty of bootstrapping the project with Create React App. We've added Redux and Thunks middleware to the 
+package.json as well. 
 
 In order to simulate working with a backend, we have provided a mock API for comments. We also added a script to 
 install the dependencies for both the frontend and the API with a single command. Additionally, we tweaked the default start
@@ -88,10 +93,18 @@ The response shape to the aforementioned request would look like this:
 * The mock API stores submissions in memory but does not persist to disk. When you stop the Node.js process for the API any previously submitted comments will be gone.
 * The mock API is not pre-seeded with comments. The `GET` request will not return any comments unless and until you have submitted comments. 
 ## Technical Requirements
-1. Please use React Hooks and React-Redux Hooks
+1. Please use React Hooks and React Redux Hooks.
 2. The comments should be stored in Redux, not the local state of the components.
 3. Please make sure that your Redux store is exposed to Redux Dev Tools
-4. Please use JavaScript Standard Style
+4. Please use JavaScript Standard Style.
+5. Writing tests in considered extra credit but strongly encouraged _if you have the time_. Please see below. 
+
+## Testing
+We would love to know about your experience testing React applications! If you have the time to demonstrate 
+that to us now we'd love to see you write tests for this code challenge! However, we don't want to take up too much of your time.
+We understand and appreciate that interviewing for developer jobs is very time consuming and you may have other code challenges on your plate. 
+If you prefer, we can deep dive into testing in the final round of the interview process. 
+
  
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
