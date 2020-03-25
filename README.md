@@ -7,27 +7,26 @@ depending upon how many breaks you take.
 
 Your task is to create a comments app using React, React Hooks, Redux, and React-Redux Hooks. Please refer to the images 
 in the ui-screenshots directory and the specifications outlined in this document. The styling does not need to be a 
-pixel-perfect exact match. It should however look close to the images supplied. 
+pixel-perfect match (i.e. default font-types can differ, font-sizes can be eyeballed), but please respect the layout of the screenshot (i.e. alignment, indention)
  
 
 ![image of app](ui-screenshots/populated-state.png)
  
 ## Feature Requirements
-1. Please style the application to match the images in the ui-screenshots directory.
-2. The comment count in the main heading should update when comments are added or deleted
-3. The comment count should **not** display when there are zero comments.
-4. When a comment is successfully submitted, the email input and comment inputs should automatically clear.
-5. If the email field is left empty the comment should not submit and an error should display (see `error-sstate.png` in `ui-screenshots`)
-6. If the comment field is left empty clicking the button should not trigger a submission.
+1. The comment count in the main heading should update when comments are added or deleted
+2. The comment count should **not** display when there are zero comments.
+3. When a comment is successfully submitted, the email input and comment inputs should automatically clear.
+4. If the email field is left empty the comment should not submit and an error should display (see `error-sstate.png` in `ui-screenshots`)
+5. If the comment field is left empty clicking the button should not trigger a submission.
 6. The comments should persist if the page is reloaded. 
+7. Please style the application to match the images in the ui-screenshots directory.
 
 ## What's in this project file?
 
 We know that applying for developer jobs can be very time consuming. In the interest of saving you some time, we have 
 taken the liberty of bootstrapping the project with Create React App. We've added Redux and Thunks middleware to the 
 package.json as well. We also bootstrapped the project with SASS. We actually use Styled Components but we don't assume 
-you're familiar with it. You may use whatever CSS pre-processor you like. If you are familiar with Styled Components 
-feel free to use that.
+you're familiar with it. You may use whatever CSS pre-processor that you wish (i.e. SASS, Styled Components, Emotion) 
 
 In order to simulate working with a backend, we have provided a mock API for comments. We also added a script to 
 install the dependencies for both the frontend and the API with a single command. Additionally, we tweaked the default start
@@ -93,7 +92,7 @@ The response shape to the aforementioned request would look like this:
 
 ### Please note the following when working with the mock API:
 * The mock API stores submissions in memory but does not persist to disk. When you stop the Node.js process for the API any previously submitted comments will be gone.
-* The mock API is not pre-seeded with comments. The `GET` request will not return any comments unless and until you have submitted comments. 
+* The mock API is not pre-seeded with comments. The `GET` request will not return any comments until you have submitted comments. 
 ## Technical Requirements
 1. Please use React Hooks and React Redux Hooks.
 2. The comments should be stored in Redux, not the local state of the components.
