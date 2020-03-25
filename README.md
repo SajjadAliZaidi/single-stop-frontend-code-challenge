@@ -25,7 +25,9 @@ pixel-perfect exact match. It should however look close to the images supplied.
 
 We know that applying for developer jobs can be very time consuming. In the interest of saving you some time, we have 
 taken the liberty of bootstrapping the project with Create React App. We've added Redux and Thunks middleware to the 
-package.json as well. 
+package.json as well. We also bootstrapped the project with SASS. We actually use Styled Components but we don't assume 
+you're familiar with it. You may use whatever CSS pre-processor you like. If you are familiar with Styled Components 
+feel free to use that.
 
 In order to simulate working with a backend, we have provided a mock API for comments. We also added a script to 
 install the dependencies for both the frontend and the API with a single command. Additionally, we tweaked the default start
