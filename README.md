@@ -1,7 +1,7 @@
 ## SingleStop Frontend Developer Code Challenge
 
 Thank you for taking the time to do our code challenge. Over the years we've been involved in many technical 
-interviews --on both sides of the table.  We feel that this is a better way to know you as a developer than whiteboarding 
+interviews — on both sides of the table.  We feel that this is a better way to know you as a developer than whiteboarding 
 or solving esoteric puzzles. We _think_ this will take you around 2 to 2.5 hours to complete (excluding the extra credit) 
 depending upon how many breaks you take. 
 
