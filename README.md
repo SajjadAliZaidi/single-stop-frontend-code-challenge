@@ -57,7 +57,6 @@ The following sample response illustrates the shape returned by a GET request to
   }
 }
 ```
-**Please note** that the mock API is not pre-populated with comments. You want get anything back from the GET request until you have made one or more submissions
 
 The following sample payload illustrates the correct shape of a **POST** request to the comment API:
 ```
@@ -92,7 +91,7 @@ The response shape to the aforementioned request would look like this:
 
 ### Please note the following when working with the mock API:
 * The mock API stores submissions in memory but does not persist to disk. When you stop the Node.js process for the API any previously submitted comments will be gone.
-* The mock API is not pre-seeded with comments. The `GET` request will not return any comments until you have submitted comments. 
+
 ## Technical Requirements
 1. Please use React Hooks and React Redux Hooks.
 2. The comments should be stored in Redux, not the local state of the components.
