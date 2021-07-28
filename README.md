@@ -2,10 +2,11 @@
 
 Thank you for taking the time to do our code challenge. Over the years we've been involved in many technical 
 interviews — on both sides of the table.  We feel that this is a better way to know you as a developer than whiteboarding 
-or solving esoteric puzzles. We _think_ this will take you around 2 to 2.5 hours to complete (excluding the extra credit) 
-depending upon how many breaks you take. 
+or solving esoteric puzzles. We _think_ this will take approximately one full day's worth of work to complete. We realize you are busy and may need to 
+spread the work out over several days depending upon your work and / or interview schedule. We don't want you to feel pressured. Please get it back to us as
+soon as you are reasonably able to.
 
-The objective is to create a comments app using React, React Hooks, Redux, and React-Redux Hooks. Please refer to the images 
+The objective is to create a comments app using React, React Hooks, Redux, React-Redux Hooks and Styled Components. Please refer to the images 
 in the ui-screenshots directory and the specifications outlined in this document. The styling does not need to be a 
 pixel-perfect match (i.e. default font-types can differ, font-sizes can be eyeballed), but please respect the layout of the screenshot (i.e. alignment, indention)
  
@@ -24,9 +25,8 @@ pixel-perfect match (i.e. default font-types can differ, font-sizes can be eyeba
 ## What's in this project file?
 
 We know that applying for developer jobs can be very time consuming. In the interest of saving you some time, we have 
-taken the liberty of bootstrapping the project with Create React App. We've added Redux and Thunks middleware to the 
-package.json as well. We also bootstrapped the project with SASS. We actually use Styled Components but we don't assume 
-you're familiar with it. You may use whatever CSS pre-processor that you wish (i.e. SASS, Styled Components, Emotion) 
+taken the liberty of bootstrapping the project with Create React App. We've added Redux, Thunks, and Styled Components to the
+package.json as well. (There is a .css file in the project but we would like you to use Styled Components.)
 
 In order to simulate working with a backend, we have provided a mock API for comments. We also added a script to 
 install the dependencies for both the frontend and the API with a single command. Additionally, we tweaked the default start
@@ -97,7 +97,8 @@ The response shape to the aforementioned request would look like this:
 2. The comments should be stored in Redux, not the local state of the components.
 3. Please make sure that your Redux store is exposed to Redux Dev Tools
 4. Please use JavaScript Standard Style.
-5. Writing tests in considered extra credit but strongly encouraged _if you have the time_. Please see below. 
+5. Please use Styled Components.
+6. Writing tests in considered extra credit but strongly encouraged _if you have the time_. Please see below. 
 
 ## Testing
 We would love to know about your experience testing React applications! If you have the time to demonstrate 
