@@ -1,9 +1,8 @@
 import React from 'react';
-import './App.scss';
 
 function App() {
   return (
-    <div className="App">
+    <div>
       <h1>Comments</h1>
     </div>
   );
