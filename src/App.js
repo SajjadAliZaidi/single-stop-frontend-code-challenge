@@ -9,7 +9,7 @@ function App() {
 
   return (
     <div className='app'>
-      <h1>Comments {Object.keys(state.comments).length > 0 ? Object.keys(state.comments).length : ''}</h1>
+      <h1>Comments {Object.keys(state.comments).length > 0 ? `(${Object.keys(state.comments).length})` : ''}</h1>
 
       <CommentInput />
       <CommentList />
