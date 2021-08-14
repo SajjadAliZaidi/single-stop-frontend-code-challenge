@@ -2,6 +2,7 @@ import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import * as actionCreators from './redux/action-creators/index';
+import CommentInput from './components/CommentInput';
 
 function App() {
 
@@ -16,7 +17,10 @@ function App() {
   return (
     <div className='app'>
       <h1>Comments</h1>
-      <button onClick={() => addComment({
+
+      <CommentInput/>
+
+      {/* <button onClick={() => addComment({
         comment: {
           email: "s@gmail.com",
           body: "hello",
@@ -28,7 +32,7 @@ function App() {
         id: 0
       })}>
         Delete
-      </button>
+      </button> */}
     </div>
   );
 }
