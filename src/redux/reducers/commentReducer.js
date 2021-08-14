@@ -1,19 +1,23 @@
 const INITIAL_STATE = {
-  comments: []
 }
 
 const reducer = (state = INITIAL_STATE, action) => {
   switch (action.type) {
-    case "ADD":
+    case "ADD": {
+      const id = action.payload.id;
+      const newComment = action.payload.newComment;
       return {
-        comments: [...state.comments, action.payload]
+        ...state,
+        [id]: newComment
       };
-    case "DELETE":
+    }
+    case "DELETE": {
+      const newState = { ...state };
+      delete newState[action.payload.id];
       return {
-        comments: state.comments.filter(comment => {
-          return comment.id !== action.payload
-        })
+        ...newState
       };
+    }
     default:
       return state;
   }
