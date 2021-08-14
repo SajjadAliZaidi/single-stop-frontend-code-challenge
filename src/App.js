@@ -1,38 +1,18 @@
 import React from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { bindActionCreators } from 'redux';
-import * as actionCreators from './redux/action-creators/index';
+import { useSelector } from 'react-redux';
 import CommentInput from './components/CommentInput';
+import CommentList from './components/CommentList';
 
 function App() {
 
-  let id_ = 0;
-
   const state = useSelector((state) => state);
-  console.log(state);
-  const dispatch = useDispatch();
-
-  const { addComment, deleteComment } = bindActionCreators(actionCreators, dispatch);
 
   return (
     <div className='app'>
-      <h1>Comments</h1>
+      <h1>Comments {Object.keys(state.comments).length > 0 ? Object.keys(state.comments).length : ''}</h1>
 
-      <CommentInput/>
-
-      {/* <button onClick={() => addComment({
-        comment: {
-          email: "s@gmail.com",
-          body: "hello",
-          date: new Date(),
-          id: id_++
-        }
-      })}>Add</button>
-      <button onClick={() => deleteComment({
-        id: 0
-      })}>
-        Delete
-      </button> */}
+      <CommentInput />
+      <CommentList />
     </div>
   );
 }
