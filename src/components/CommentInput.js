@@ -5,7 +5,28 @@ import * as actionCreators from '../redux/action-creators/index';
 import styled from 'styled-components';
 import { commentFactory } from '../utils/comments';
 
-const InputContainer = styled.div``;
+const InputContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  padding: 5px 0;
+`;
+
+const InputLabel = styled.label`
+  width: 15%;
+  display: flex;
+  flex-direction: flex-start;
+`;
+
+const InputItem = styled.input`
+  width: 85%;
+`;
+
+const Button = styled.button`
+  width: 100%;
+  font-size: 1rem;
+  padding: 0.3rem;
+`;
+
 
 const CommentInput = () => {
 
@@ -29,7 +50,7 @@ const CommentInput = () => {
 
   const handleCommentSubmit = (e) => {
     if (email === '') {
-      setError('Email is required');
+      setError('Email address is required!');
     } else {
       console.log('submit');
       addComment(commentFactory({ email, body: commentBody }));
@@ -42,8 +63,10 @@ const CommentInput = () => {
   return (
     <React.Fragment>
       <InputContainer>
-        <label htmlFor="commentEmailInput">Email: </label>
-        <input
+        <InputLabel htmlFor="commentEmailInput">
+          Email:
+        </InputLabel>
+        <InputItem
           id="commentEmailInput"
           type="email"
           value={email}
@@ -51,21 +74,23 @@ const CommentInput = () => {
         />
       </InputContainer>
       <InputContainer>
-        <label htmlFor="commentBodyInput">Comment: </label>
-        <input
+        <InputLabel htmlFor="commentBodyInput">
+          Comment:
+        </InputLabel>
+        <InputItem
           id="commentBodyInput"
           type="text"
           value={commentBody}
           onChange={handleCommentInput}
         />
       </InputContainer>
-      <button
+      <Button
         onClick={handleCommentSubmit}
         disabled={commentBody === ''}
       >Add Comment
-      </button>
-      <p style={{ color: 'red' }}>{error}</p>
-    </React.Fragment>
+      </Button>
+      <p className="error-text">{error}</p>
+    </React.Fragment >
   );
 }
 
