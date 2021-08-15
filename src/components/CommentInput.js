@@ -90,7 +90,7 @@ const CommentInput = () => {
       >Add Comment
       </Button>
       <p className="error-text">{error}</p>
-    </React.Fragment >
+    </React.Fragment>
   );
 }
 
