@@ -37,6 +37,9 @@ const CommentList = () => {
   const dispatch = useDispatch();
 
   const { deleteComment } = bindActionCreators(actionCreators, dispatch);
+  const handleDeleteComment = (key) => {
+    deleteComment({ id: state.comments[key].id })
+  }
 
   return (
     <React.Fragment>
@@ -47,7 +50,7 @@ const CommentList = () => {
             <CommentBodyContainer>
               <CommentText>{state.comments[key].body}</CommentText>
               <DeleteButton
-                onClick={() => deleteComment({ id: state.comments[key].id })}
+                onClick={() => handleDeleteComment(key)}
               >Delete</DeleteButton>
             </CommentBodyContainer>
             <p className="gray-text">{state.comments[key].date} at {state.comments[key].time}</p>
