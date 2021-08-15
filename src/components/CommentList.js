@@ -43,7 +43,7 @@ const CommentList = () => {
 
   return (
     <React.Fragment>
-      {Object.keys(state.comments).map(function renderComment(key) {
+      {Object.keys(state.comments).map(key => {
         return (
           <CommentContainer key={state.comments[key].id}>
             <p>{state.comments[key].email}:</p>

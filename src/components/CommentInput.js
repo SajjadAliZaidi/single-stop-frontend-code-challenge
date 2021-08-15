@@ -49,6 +49,7 @@ const CommentInput = () => {
   }
 
   const handleCommentSubmit = (e) => {
+    e.preventDefault();
     if (email === '') {
       setError('Email address is required!');
     } else {
@@ -62,34 +63,37 @@ const CommentInput = () => {
 
   return (
     <React.Fragment>
-      <InputContainer>
-        <InputLabel htmlFor="commentEmailInput">
-          Email:
-        </InputLabel>
-        <InputItem
-          id="commentEmailInput"
-          type="email"
-          value={email}
-          onChange={handleEmailInput}
-        />
-      </InputContainer>
-      <InputContainer>
-        <InputLabel htmlFor="commentBodyInput">
-          Comment:
-        </InputLabel>
-        <InputItem
-          id="commentBodyInput"
-          type="text"
-          value={commentBody}
-          onChange={handleCommentInput}
-        />
-      </InputContainer>
-      <Button
-        onClick={handleCommentSubmit}
-        disabled={commentBody === ''}
-      >Add Comment
-      </Button>
-      <p className="error-text">{error}</p>
+      <form>
+        <InputContainer>
+          <InputLabel htmlFor="commentEmailInput">
+            Email:
+          </InputLabel>
+          <InputItem
+            id="commentEmailInput"
+            type="email"
+            value={email}
+            onChange={handleEmailInput}
+          />
+        </InputContainer>
+        <InputContainer>
+          <InputLabel htmlFor="commentBodyInput">
+            Comment:
+          </InputLabel>
+          <InputItem
+            id="commentBodyInput"
+            type="text"
+            value={commentBody}
+            onChange={handleCommentInput}
+          />
+        </InputContainer>
+        <Button
+          type="submit"
+          onClick={handleCommentSubmit}
+          disabled={commentBody === ''}
+        >Add Comment
+        </Button>
+        <p className="error-text">{error}</p>
+      </form>
     </React.Fragment>
   );
 }
